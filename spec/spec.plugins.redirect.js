@@ -1,4 +1,7 @@
 
+var use = require('express/plugin').use,
+    set = require('express/dsl').set
+
 describe 'Express'
   before_each
     reset()

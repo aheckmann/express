@@ -1,4 +1,6 @@
 
+var use = require('express/plugin').use
+
 describe 'Express'
   before_each
     reset()

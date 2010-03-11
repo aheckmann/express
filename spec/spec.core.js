@@ -1,7 +1,12 @@
 
+var configure = require('express/dsl').configure,
+    set = require('express/dsl').set,
+    enable = require('express/dsl').enable,
+    disable = require('express/dsl').disable
+    
 describe 'Express'
   describe '.version'
-    it 'should be properly formatted'
+    it 'should be a triplet'
       Express.version.should.match(/^\d+\.\d+\.\d+$/)
     end
   end

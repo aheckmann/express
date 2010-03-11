@@ -1,4 +1,6 @@
 
+var set = require('express/dsl').set
+
 describe 'Express'
   before_each
     reset()
