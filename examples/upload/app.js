@@ -3,7 +3,8 @@ require.paths.unshift('lib')
 require('express')
 require('express/plugins')
 
-var kiwi = require('kiwi')
+var kiwi = require('kiwi'),
+    sys = require('sys')
 
 configure(function(){
   kiwi.seed('haml')
@@ -31,7 +32,7 @@ get('/upload', function(){
 
 post('/upload', function(){  
   this.param('images').each(function(image){
-    puts(image.filename + ' -> ' + image.tempfile)
+    sys.puts(image.filename + ' -> ' + image.tempfile)
     this.flash('info', 'Uploaded ' + image.filename)
   }, this)
   this.redirect('/upload')
