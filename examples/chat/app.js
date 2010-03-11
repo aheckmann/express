@@ -1,7 +1,6 @@
 
 require.paths.unshift('lib')
-require('express')
-require('express/plugins')
+require('express/import')
 
 var messages = [],
     utils = require('express/utils'),
