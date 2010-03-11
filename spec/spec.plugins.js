@@ -1,5 +1,6 @@
 
-var mime = require('express/mime')
+var mime = require('express/mime'),
+    Plugin = require('express/plugin').Plugin
 
 CSSColors = Plugin.extend({
   extend: {
