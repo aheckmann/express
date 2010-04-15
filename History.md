@@ -1,4 +1,34 @@
 
+0.9.0 / 2010-04-14
+==================
+
+  * Added DSL level error() route support
+  * Added DSL level notFound() route support
+  * Added Request#error()
+  * Added Request#notFound()
+  * Added Request#render() callback function. Closes #258
+  * Added "max upload size" setting
+  * Added "magic" variables to collection partials (\_\_index\_\_, \_\_length\_\_, \_\_isFirst\_\_, \_\_isLast\_\_). Closes #254
+  * Added [haml.js](http://github.com/visionmedia/haml.js) submodule; removed haml-js
+  * Added callback function support to Request#halt() as 3rd/4th arg
+  * Added preprocessing of route param wildcards using param(). Closes #251
+  * Added view partial support (with collections etc)
+  * Fixed bug preventing falsey params (such as ?page=0). Closes #286
+  * Fixed setting of multiple cookies. Closes #199
+  * Changed; view naming convention is now NAME.TYPE.ENGINE (for example page.html.haml)
+  * Changed; session cookie is now httpOnly
+  * Changed; Request is no longer global
+  * Changed; Event is no longer global
+  * Changed; "sys" module is no longer global
+  * Changed; moved Request#download to Static plugin where it belongs
+  * Changed; Request instance created before body parsing. Closes #262
+  * Changed; Pre-caching views in memory when "cache view contents" is enabled. Closes #253
+  * Changed; Pre-caching view partials in memory when "cache view partials" is enabled
+  * Updated support to node --version 0.1.90
+  * Updated dependencies
+  * Removed set("session cookie") in favour of use(Session, { cookie: { ... }})
+  * Removed utils.mixin(); use Object#mergeDeep()
+  
 0.8.0 / 2010-03-19
 ==================
 
