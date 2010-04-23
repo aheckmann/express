@@ -2,4 +2,6 @@
 *.seed
 *.log
 *.csv
+*.dat
 *.out
+benchmarks/graphs
