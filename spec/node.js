@@ -6,7 +6,8 @@ require("express/spec")
 
 print = require('sys').puts
 quit = process.exit
-readFile = require('fs').readFileSync
+var fs = require('fs')
+readFile = function(file) { return fs.readFileSync(file, 'utf8')}
 
 function run(specs) {
   specs.forEach(function(spec){
